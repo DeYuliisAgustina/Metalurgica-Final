@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VISTA
 {
-    public partial class Form1 : Form
+    public partial class formRecuperarUsuario : Form
     {
-        public Form1()
+        public formRecuperarUsuario()
         {
             InitializeComponent();
         }

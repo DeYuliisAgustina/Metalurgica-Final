@@ -33,8 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReaLTaiizor, Version=3.8.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReaLTaiizor.3.8.0.7\lib\net481\ReaLTaiizor.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,16 +56,152 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Menu Principal\formMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Menu Principal\formMenuPrincipal.Designer.cs">
+      <DependentUpon>formMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Seguridad\formCambiarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Seguridad\formCambiarClave.Designer.cs">
+      <DependentUpon>formCambiarClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Seguridad\formInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Seguridad\formInicioSesion.Designer.cs">
+      <DependentUpon>formInicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Seguridad\formRecuperarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Seguridad\formRecuperarClave.Designer.cs">
+      <DependentUpon>formRecuperarClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Seguridad\formRecuperarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Seguridad\formRecuperarUsuario.Designer.cs">
+      <DependentUpon>formRecuperarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Seguridad\formRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Seguridad\formRegistro.Designer.cs">
+      <DependentUpon>formRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\formBuscarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\formBuscarCompra.Designer.cs">
+      <DependentUpon>formBuscarCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\formClienteAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\formClienteAM.Designer.cs">
+      <DependentUpon>formClienteAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\formClienteDGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\formClienteDGV.Designer.cs">
+      <DependentUpon>formClienteDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\formCrearCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\formCrearCompra.Designer.cs">
+      <DependentUpon>formCrearCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\formCrearVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\formCrearVenta.Designer.cs">
+      <DependentUpon>formCrearVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\formProductosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\formProductosAM.Designer.cs">
+      <DependentUpon>formProductosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\formProductosDGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\formProductosDGV.Designer.cs">
+      <DependentUpon>formProductosDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\formProveedorDGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\formProveedorDGV.Designer.cs">
+      <DependentUpon>formProveedorDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\formProveedoresAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\formProveedoresAM.Designer.cs">
+      <DependentUpon>formProveedoresAM.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI Administrador\formUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI Administrador\formUsuarios.Designer.cs">
+      <DependentUpon>formUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Menu Principal\formMenuPrincipal.resx">
+      <DependentUpon>formMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Seguridad\formCambiarClave.resx">
+      <DependentUpon>formCambiarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Seguridad\formInicioSesion.resx">
+      <DependentUpon>formInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Seguridad\formRecuperarClave.resx">
+      <DependentUpon>formRecuperarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Seguridad\formRecuperarUsuario.resx">
+      <DependentUpon>formRecuperarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Seguridad\formRegistro.resx">
+      <DependentUpon>formRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\formBuscarCompra.resx">
+      <DependentUpon>formBuscarCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\formClienteAM.resx">
+      <DependentUpon>formClienteAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\formClienteDGV.resx">
+      <DependentUpon>formClienteDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\formCrearCompra.resx">
+      <DependentUpon>formCrearCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\formCrearVenta.resx">
+      <DependentUpon>formCrearVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\formProductosAM.resx">
+      <DependentUpon>formProductosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\formProductosDGV.resx">
+      <DependentUpon>formProductosDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\formProveedorDGV.resx">
+      <DependentUpon>formProveedorDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\formProveedoresAM.resx">
+      <DependentUpon>formProveedoresAM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +211,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI Administrador\formUsuarios.resx">
+      <DependentUpon>formUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
